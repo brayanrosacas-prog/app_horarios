@@ -1,0 +1,7 @@
+{
+  "name": "sistema_horarios",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
