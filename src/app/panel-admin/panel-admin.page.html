@@ -1,0 +1,171 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <!-- Botón de hamburguesa que solo aparece en móvil -->
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    
+    <!-- Logo o Título -->
+    <ion-title>
+      <div class="header-title">
+        
+        Panel de Administración
+      </div>
+    </ion-title>
+    
+    <!-- Enlaces de cabecera que se ocultan en móvil y se muestran en web -->
+    <div slot="end" class="desktop-nav ion-hide-sm-down">
+      <ion-button fill="clear" color="light"><ion-icon name="home-outline" slot="start"></ion-icon> Inicio</ion-button>
+      <ion-button fill="clear" color="light"><ion-icon name="settings-outline" slot="start"></ion-icon> Ajustes</ion-button>
+      <ion-button fill="clear" color="light"><ion-icon name="log-out-outline" slot="start"></ion-icon> Salir</ion-button>
+    </div>
+  </ion-toolbar>
+  
+  <!-- Línea decorativa cyan inferior (como en tu referencia) -->
+  <div class="header-accent-line"></div>
+</ion-header>
+
+<ion-content class="ion-padding" color="light">
+  <div class="main-container">
+    <h1 class="ion-text-center section-title">Módulos de Inserción</h1>
+    
+    <ion-grid>
+      <ion-row>
+        
+        <!-- Tarjeta 1: Profesores -->
+        <ion-col size="12" size-md="6" size-lg="3">
+          <ion-card class="admin-card" (click)="irARegistro('profesores')">
+            <!-- Mitad superior oscura -->
+            <div class="card-img-header">
+              <img src="assets/imagenes/icono_profesor.png"alt="Profesores" class="header-image">
+                <h2>Profesores</h2>
+            </div>
+              
+            <!-- Mitad inferior blanca -->
+            <div class="card-content-wrapper">
+              <ion-card-header>
+                <ion-card-title>Gestión de Profesores</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <p>Registro de nueva plantilla docente, asignación de departamentos y credenciales.</p>
+                <ion-button fill="clear" color="tertiary" class="action-link">
+                  Registrar <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+                </ion-button>
+              </ion-card-content>
+            </div>
+          </ion-card>
+        </ion-col>
+
+        <!-- Tarjeta 2: Alumnos -->
+        <ion-col size="12" size-md="6" size-lg="3">
+          <ion-card class="admin-card active-card" (click)="irARegistro('alumnos')">
+            <div class="card-img-header">
+              <div class="card-img-header">
+                <img src="assets/imagenes/icono_alumno.png"alt="Alumnos" class="header-image">
+                <h2>Alumnos</h2>
+              </div>
+              
+            </div>
+            <div class="card-content-wrapper">
+              <ion-card-header>
+                <ion-card-title>Matrícula de Alumnos</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <p>Dar de alta estudiantes de nuevo ingreso, generación de números de control.</p>
+                <ion-button fill="clear" color="tertiary" class="action-link">
+                  Registrar <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+                </ion-button>
+              </ion-card-content>
+            </div>
+          </ion-card>
+        </ion-col>
+
+        <!-- Tarjeta 3: Carreras -->
+        <ion-col size="12" size-md="6" size-lg="3">
+          <ion-card class="admin-card" (click)="irARegistro('carreras')">
+            <div class="card-img-header">
+              <img src="assets/imagenes/icono_reticula.png"alt="Carreras" class="header-image">
+                <h2>Retículas</h2>
+            </div>
+
+            <div class="card-content-wrapper">
+              <ion-card-header>
+                <ion-card-title>Planes de Estudio</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <p>Creación de ingenierías, licenciaturas y retículas de especialidad.</p>
+                <ion-button fill="clear" color="tertiary" class="action-link">
+                  Registrar <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+                </ion-button>
+              </ion-card-content>
+            </div>
+          </ion-card>
+        </ion-col>
+
+        <!-- Tarjeta 4: Clases -->
+        <ion-col size="12" size-md="6" size-lg="3">
+          <ion-card class="admin-card" (click)="irARegistro('clases')">
+            <div class="card-img-header">
+              <img src="assets/imagenes/icono_clases.png"alt="Clases" class="header-image">
+              <h2>Clases</h2>
+            </div>
+            <div class="card-content-wrapper">
+              <ion-card-header>
+                <ion-card-title>Horarios y Grupos</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <p>Apertura de materias, asignación de aulas físicas y vinculación con docentes.</p>
+                <ion-button fill="clear" color="tertiary" class="action-link">
+                  Registrar <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+                </ion-button>
+              </ion-card-content>
+            </div>
+          </ion-card>
+        </ion-col>
+
+        <!-- Tarjeta 5: materias -->
+        <ion-col size="12" size-md="6" size-lg="3">
+          <ion-card class="admin-card" (click)="irARegistro('materias')">
+            <div class="card-img-header">
+              <img src="assets/imagenes/icono_materias.png"alt="Materias" class="header-image">
+              <h2>Materias</h2>
+            </div>
+            <div class="card-content-wrapper">
+              <ion-card-header>
+                <ion-card-title>Materias</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <p>Apertura de materias, asignación de aulas físicas y vinculación con docentes.</p>
+                <ion-button fill="clear" color="tertiary" class="action-link">
+                  Registrar <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+                </ion-button>
+              </ion-card-content>
+            </div>
+          </ion-card>
+        </ion-col>
+
+        <!-- Tarjeta 6: empleados -->
+        <ion-col size="12" size-md="6" size-lg="3">
+          <ion-card class="admin-card" (click)="irARegistro('Empleados')">
+            <div class="card-img-header">
+              <img src="assets/imagenes/icono_empleado.png"alt="Empleados" class="header-image">
+              <h2>Empleados</h2>
+            </div>
+            <div class="card-content-wrapper">
+              <ion-card-header>
+                <ion-card-title>Empleados</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <p>Apertura de materias, asignación de aulas físicas y vinculación con docentes.</p>
+                <ion-button fill="clear" color="tertiary" class="action-link">
+                  Registrar <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+                </ion-button>
+              </ion-card-content>
+            </div>
+          </ion-card>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

@@ -10,4 +10,13 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+
+  {
+    path: 'panel-admin',
+    loadComponent: () => import('./panel-admin/panel-admin.page').then((m) => m.PanelAdminPage),
+  },
+  {
+    path: 'login-admin',
+    loadComponent: () => import('./login-admin/login-admin.page').then((m) => m.LoginAdminPage),
+  },
 ];

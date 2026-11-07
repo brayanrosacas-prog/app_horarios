@@ -1,0 +1,122 @@
+// Centrar el contenido en pantallas grandes
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  color: #1a365d;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+// Línea cyan debajo de la cabecera
+.header-accent-line {
+  height: 4px;
+  background-color: #805942; 
+  width: 100%;
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+}
+
+// Diseño de la tarjeta
+.admin-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+
+  // Mitad superior oscura
+  .card-img-header {
+    background-color: #F1C438;
+    color: white;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    ion-icon {
+      font-size: 3rem;
+      color: #7289da; // Color de acento para el ícono
+    }
+    
+    h2 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 300;
+    }
+  }
+
+  // Mitad inferior clara
+  .card-content-wrapper {
+    background-color: #ffffff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    ion-card-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #d3d91b;
+      text-align: center;
+    }
+
+    ion-card-content {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+
+      p {
+        color: #7f8c8d;
+        font-size: 0.9rem;
+        flex-grow: 1; // Empuja el botón hacia abajo
+      }
+
+      .action-link {
+        margin-top: 15px;
+        text-transform: none;
+        font-weight: 500;
+      }
+    }
+  }
+
+  // Efecto Hover (similar a la tarjeta de Teams seleccionada)
+  &:hover, &.active-card {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 209, 224, 0.15);
+    border: 1px solid #00d1e0; // El borde azul claro al seleccionar
+  }
+}
+
+// ajuste del tamaño de la imagen en la cabecera de la tarjeta
+.header-image {
+  width: 90px; /* Ajusta el tamaño según necesites */
+  height: auto;
+  margin-right: 10px; /* Separación con el texto (<h2>) */
+}
+
+/* 1. Le decimos a la tarjeta que ocupe el 100% de la columna */
+.admin-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 2. Le decimos al contenedor del texto que distribuya el espacio libre */
+.card-content-wrapper {
+  flex-grow: 1; /* Esto hace que el área blanca tome todo el espacio sobrante */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Esto empuja el botón "Registrar" siempre hasta abajo */
+}
